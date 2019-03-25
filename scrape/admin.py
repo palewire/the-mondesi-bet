@@ -1,3 +1,7 @@
 from django.contrib import admin
+from scrape.models import SeasonTotal
 
-# Register your models here.
+
+@admin.register(SeasonTotal)
+class SeasonTotalAdmin(admin.ModelAdmin):
+    pass
