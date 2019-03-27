@@ -14,6 +14,7 @@ bs4 = "*"
 python-dateutil = "*"
 requests = "*"
 html5lib = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 jupyterlab = "*"
