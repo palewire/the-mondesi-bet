@@ -4,6 +4,7 @@ from scrape import views
 
 
 urlpatterns = [
-    path('season-totals.json', views.seasontotals_latest, name="index"),
+    path('season-totals.json', views.seasontotals_latest, name="season-totals"),
+    path('game-logs.json', views.gamelogs_latest, name="game-logs"),
     path('admin/', admin.site.urls),
 ]

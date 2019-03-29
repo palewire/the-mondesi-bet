@@ -19,7 +19,7 @@ class Command(BaseCommand):
 
     def get_data(self):
         """
-        Scrape a few Ichiro stats from baseball-reference.com.
+        Scrape stats from baseball-reference.com.
 
         Returns them as an OrderedDict with season's year as the key.
         """

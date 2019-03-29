@@ -14,3 +14,18 @@ class SeasonTotal(models.Model):
 
     def __str__(self):
         return f"{self.datetime}"
+
+
+class GameLog(models.Model):
+    """
+    Mondesi's daily game logs from his Baseball Reference profile page.
+    """
+    datetime = models.DateTimeField(auto_now_add=True)
+    json = models.TextField()
+
+    class Meta:
+        ordering = ("-datetime",)
+        get_latest_by = "datetime"
+
+    def __str__(self):
+        return f"{self.datetime}"
