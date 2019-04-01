@@ -29,3 +29,18 @@ class GameLog(models.Model):
 
     def __str__(self):
         return f"{self.datetime}"
+
+
+class Projection(models.Model):
+    """
+    Mondesi's projected season totals from FanGraphs.
+    """
+    datetime = models.DateTimeField(auto_now_add=True)
+    json = models.TextField()
+
+    class Meta:
+        ordering = ("-datetime",)
+        get_latest_by = "datetime"
+
+    def __str__(self):
+        return f"{self.datetime}"
