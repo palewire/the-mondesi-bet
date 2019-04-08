@@ -14,9 +14,8 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         data = self.get_data()
         dumped = json.dumps(data, indent=4)
-        print(dumped)
-        # obj = Projection.objects.create(json=dumped)
-        # print(f"Created {obj}")
+        obj = Projection.objects.create(json=dumped)
+        print(f"Created {obj}")
 
     def get_data(self):
         return {
